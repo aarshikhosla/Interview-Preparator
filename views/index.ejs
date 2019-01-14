@@ -1,0 +1,23 @@
+<!-- views/pages/view.ejs -->
+<h2>Questions</h2>
+<form method="POST" action="/search">
+    <input type="text" name="keyss" placeholder="keyword">
+    <input type="text" name="company" placeholder="company">
+    <button type="submit">search</button>
+</form>
+
+<a href="/">home</a>
+<ul>
+    
+    <% questions.forEach(function(question) { %>
+        <li>
+            <div style="border:solid; ">
+             <p><%= question.detail %><pre>                                               </pre>
+                 <a href='#'>view more....</a></p>
+             <p>keyword:<%= question.keyword %></p>
+             <p>company:<%= question.company %>
+            </p>
+        </div>
+        </li><br>
+    <% }); %>
+</ul>
