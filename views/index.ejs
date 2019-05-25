@@ -12,11 +12,13 @@
     <% questions.forEach(function(question) { %>
         <li>
             <div style="border:solid; ">
-             <p><%= question.detail %><pre>                                               </pre>
-                 <a href='#'>view more....</a></p>
-             <p>keyword:<%= question.keyword %></p>
-             <p>company:<%= question.company %>
-            </p>
+             <p>question: <%= question.detail %><br>  
+                <%if (question.keyword ) { %>
+                    keyword: <%= question.keyword %>
+                    <% } %> <br>
+                <%if (question.company) { %>
+                    company: <%= question.company%>
+                    <% } %></p>
         </div>
         </li><br>
     <% }); %>

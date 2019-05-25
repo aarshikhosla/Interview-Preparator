@@ -1,9 +1,12 @@
 
 var area=document.getElementById("ar");
 function adding(){
-    var c=document.createElement('button');
-    //c.addClass("input--style-2");
-    //c.addName("key");
-    //c.addPlaceholder("enter keyword");
-    area.appendChild(c);
+    var di=document.createElement('div');
+    di.className='input-group';
+    var inp=document.createElement('input');
+    inp.className="input--style-2";
+    inp.Name="keyword";
+    inp.placeholder="enter keyword";
+    di.appendChild(inp);
+    area.appendChild(di);
 }

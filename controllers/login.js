@@ -17,7 +17,7 @@ var bodyParser = require('body-parser');
 
 router.post('/login' ,function(req,res){
 		var email= req.body.email;
-	var password = req.body.password;			
+	    var password = req.body.password;			
 
 	mongo.connect(my_db , function(error , client){
 		if (error){
